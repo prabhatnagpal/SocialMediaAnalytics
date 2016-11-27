@@ -54,7 +54,7 @@ public class FacebookLoginController implements Initializable
 					String url = webview.getEngine().getLocation();
 					accessToken = url.replaceAll(".*#access_token=(.+)&.*", "$1");
 					FacebookClient client = new DefaultFacebookClient(accessToken, Version.LATEST);
-					User user = client.fetchObject("me", User.class, Parameter.with("fields", "first_name,user_likes"));
+					User user = client.fetchObject("me", User.class, Parameter.with("fields", "first_name"));
 					fname = user.getFirstName();
 					try
 					{
