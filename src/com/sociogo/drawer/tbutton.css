@@ -1,0 +1,11 @@
+#tbutton:hover
+{
+	-fx-background-color: #ffffff;
+	-fx-text-fill: #00aced;
+}
+
+.button
+{
+	-fx-background-color: #29b6f6;
+	-fx-text-fill: #ffffff;
+}

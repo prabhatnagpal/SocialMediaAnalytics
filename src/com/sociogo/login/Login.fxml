@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.login.LoginController">
+   <children>
+      <Pane layoutY="25.0" prefHeight="339.0" prefWidth="371.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="uname" alignment="CENTER" focusColor="#09b6bc" labelFloat="true" layoutX="85.0" layoutY="74.0" maxWidth="202.0" minWidth="186.0" prefHeight="37.0" prefWidth="202.0" promptText="Username">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pass" alignment="CENTER" focusColor="#09b6bc" labelFloat="true" layoutX="85.0" layoutY="140.0" maxWidth="202.0" minWidth="149.0" prefHeight="37.0" prefWidth="202.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <HBox layoutX="92.0" layoutY="208.0" spacing="30.0">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="98.0" layoutY="196.0" onAction="#loginUser" prefHeight="37.0" prefWidth="79.0" ripplerFill="WHITE" style="-fx-background-color: #039BE5;" text="Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="196.0" onAction="#createAccount" prefHeight="37.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-color: #039BE5;" text="Sign Up" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="279.0" onAction="#authUser" ripplerFill="WHITE" style="-fx-background-color: #3949AB;" text="Login With Facebook" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="77.0" layoutY="8.0" text="Dashboard Login" textFill="#5e35b1">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <MenuBar prefHeight="20.0" prefWidth="371.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

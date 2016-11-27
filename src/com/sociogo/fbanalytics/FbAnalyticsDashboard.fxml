@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #25D366;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.fbanalytics.FbAnalyticsDashboardController">
+   <left>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="160.0" maxHeight="-Infinity" prefHeight="227.0" prefWidth="160.0" />
+   </left>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="750.0" style="-fx-background-color: #5e35b1;" styleClass="." BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" layoutX="518.0" layoutY="10.0" prefHeight="26.0" prefWidth="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="518.0" layoutY="10.0" text="Welcome," textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fname" layoutX="599.0" layoutY="10.0" text="Guest" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MenuButton layoutX="675.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #5e35b1; -fx-mark-color: #ffffff;" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#viewProfile" text="View Profile" />
+                        <MenuItem mnemonicParsing="false" onAction="#logoutHandle" text="Logout" />
+                     </items>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="13.0">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXHamburger>
+            <JFXButton layoutX="47.0" layoutY="4.0" onAction="#dashboardCallback" ripplerFill="WHITE" text="SocioGo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="58.0" onAction="#postsView" ripplerFill="WHITE" style="-fx-background-color: #4264AB;" text="Posts" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/posts.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

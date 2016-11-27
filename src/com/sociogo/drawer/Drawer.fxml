@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.drawer.DrawerController">
+   <children>
+      <VBox>
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #5e35b1;" text="Ready.." textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #5e35b1;" text="..For Analytics" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" prefHeight="42.0" prefWidth="160.0" style="-fx-background-color: #5e35b1;" text="Choose One Platform" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <JFXButton fx:id="fbutton" onAction="#facebookAnalytics" prefHeight="54.0" prefWidth="159.0" ripplerFill="#3b5999" text="facebook" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="tbutton" onAction="#twitterAnalytics" prefHeight="54.0" prefWidth="159.0" ripplerFill="#29b6f6" text="twitter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

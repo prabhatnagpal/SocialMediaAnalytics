@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #25D366;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.dashboard.DashboardController">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="750.0" style="-fx-background-color: #5e35b1;" styleClass="." BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="sociogo" layoutX="59.0" layoutY="10.0" text="SocioGo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" layoutX="518.0" layoutY="10.0" prefHeight="26.0" prefWidth="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="518.0" layoutY="10.0" text="Welcome," textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fname" layoutX="599.0" layoutY="10.0" text="Guest" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <MenuButton layoutX="675.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #5e35b1; -fx-mark-color: #ffffff;" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#viewProfile" text="View Profile" />
+                        <MenuItem mnemonicParsing="false" onAction="#logoutHandle" text="Logout" />
+                     </items>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="13.0">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXHamburger>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="160.0" maxHeight="-Infinity" prefHeight="227.0" prefWidth="160.0" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="125.0" layoutY="53.0" text="Welcome to SocioGo Analytics" textFill="#5e35b1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.5026833631484794" layoutX="14.0" layoutY="158.0" prefHeight="285.0" prefWidth="561.0" style="-fx-background-color: #25D366; -fx-alignment: center;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="276.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="1.0" maxWidth="276.0" text="SocioGo is an Application which helps a user to analyze his/her social accounts." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutY="77.0" maxWidth="276.0" text="For Now, we support Twitter and Facebook Analytics." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="133.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="123.0" fitWidth="109.0" layoutX="14.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/svc_icon_analytics.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="130.0" fitWidth="133.0" layoutX="132.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/reporting-analytics.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="276.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" layoutY="55.0" spacing="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label layoutY="55.0" maxWidth="276.0" text="Features:-" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutY="82.0" maxWidth="276.0" text="► Interactive User Interface" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutY="109.0" maxWidth="276.0" text="► Reliable Data Analysis" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutY="136.0" maxWidth="276.0" text="► Graphical Representation Support" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label layoutX="7.0" layoutY="195.0" maxWidth="276.0" text="&quot;To Make Social Life Grow.." textFill="#6a1b9a" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets left="3.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="152.0" layoutY="221.0" maxWidth="276.0" text="..Use SocioGo&quot;" textFill="#6a1b9a" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets left="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

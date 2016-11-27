@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.signup.CreateAccountController">
+   <center>
+      <Pane prefHeight="421.0" prefWidth="371.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="116.0" layoutY="21.0" text="Sign Up Form" textFill="#5e35b1">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="fname" focusColor="#09b6bc" labelFloat="true" layoutX="39.0" layoutY="87.0" maxWidth="146.0" minWidth="130.0" prefHeight="37.0" prefWidth="139.0" promptText="First Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="lname" focusColor="#09b6bc" labelFloat="true" layoutX="198.0" layoutY="87.0" maxWidth="146.0" minWidth="130.0" prefHeight="37.0" prefWidth="146.0" promptText="Last Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="uname" alignment="CENTER" focusColor="#09b6bc" labelFloat="true" layoutX="39.0" layoutY="153.0" maxWidth="305.0" minWidth="239.0" prefHeight="37.0" prefWidth="305.0" promptText="Username">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pass" focusColor="#09b6bc" labelFloat="true" layoutX="39.0" layoutY="219.0" maxWidth="305.0" minWidth="305.0" prefHeight="31.0" prefWidth="305.0" promptText="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="email" alignment="CENTER" focusColor="#09b6bc" labelFloat="true" layoutX="39.0" layoutY="286.0" maxWidth="305.0" minWidth="239.0" prefHeight="37.0" prefWidth="305.0" promptText="Email ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="79.0" layoutY="350.0" onAction="#newUser" prefHeight="37.0" prefWidth="75.0" ripplerFill="WHITE" style="-fx-background-color: #039BE5;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="217.0" layoutY="350.0" onAction="#loginCallback" prefHeight="37.0" prefWidth="75.0" ripplerFill="WHITE" style="-fx-background-color: #039BE5;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </center>
+</BorderPane>
