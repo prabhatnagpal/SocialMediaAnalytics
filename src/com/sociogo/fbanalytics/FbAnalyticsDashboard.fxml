@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -59,7 +60,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="58.0" onAction="#postsView" ripplerFill="WHITE" style="-fx-background-color: #4264AB;" text="Posts" textFill="WHITE">
+            <JFXButton fx:id="postbutton" buttonType="RAISED" layoutX="376.0" layoutY="62.0" onAction="#postsView" ripplerFill="#3b5999" text="Posts" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
@@ -70,6 +71,12 @@
                      </image>
                   </ImageView>
                </graphic>
+            </JFXButton>
+            <JFXDrawer fx:id="postdrawer" alignment="BASELINE_CENTER" defaultDrawerSize="590.0" direction="RIGHT" layoutX="14.0" layoutY="142.0" prefHeight="142.0" prefWidth="590.0" />
+            <JFXButton fx:id="gobutton" buttonType="RAISED" layoutX="293.0" layoutY="300.0" onAction="#startAnalytics" ripplerFill="WHITE" style="-fx-background-color: #5e35b1;" text="Go!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
             </JFXButton>
          </children>
       </AnchorPane>

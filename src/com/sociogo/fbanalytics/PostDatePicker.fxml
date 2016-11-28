@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
-
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sociogo.fbanalytics.PostDatePickerController">
+   <children>
+      <Label layoutX="151.0" layoutY="31.0" text="Choose the Date of Interval of Posts" textFill="#3b5999">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="since" defaultColor="#3b5999" layoutX="61.0" layoutY="84.0" promptText="From :" style="-fx-label-float: true;" />
+      <JFXDatePicker fx:id="until" defaultColor="#3b5999" layoutX="346.0" layoutY="84.0" promptText="To :" />
+   </children>
+</Pane>

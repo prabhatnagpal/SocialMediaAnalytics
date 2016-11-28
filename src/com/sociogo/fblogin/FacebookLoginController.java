@@ -27,7 +27,9 @@ import javafx.stage.Stage;
 
 public class FacebookLoginController implements Initializable
 {
-	String accessToken,oauthurl;
+	public static String accessToken;
+	
+	String oauthurl;
 	
 	public static String fname;
 	

@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
+import com.sociogo.fblogin.FacebookLoginController;
 
 import javafx.event.ActionEvent;
 
@@ -29,14 +30,27 @@ public class DrawerController implements Initializable
 	@FXML
 	public void facebookAnalytics(ActionEvent event) throws IOException
 	{
-		Parent root = FXMLLoader.load(getClass().getResource("/com/sociogo/fbanalytics/FbAnalyticsDashboard.fxml"));
-		Scene scene = new Scene(root);
-		Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		stage.hide();
-		stage.setTitle("Dashboard");
-		stage.setResizable(false);
-		stage.setScene(scene);
-		stage.show(); 
+		if(FacebookLoginController.accessToken==null)
+		{
+			Parent root = FXMLLoader.load(getClass().getResource("/com/sociogo/fblogin/FacebookLogin.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			stage.close();
+			stage.setTitle("Facebook Authorization");
+			stage.setScene(scene);
+			stage.show();
+		}
+		else
+		{
+			Parent root = FXMLLoader.load(getClass().getResource("/com/sociogo/fbanalytics/FbAnalyticsDashboard.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			stage.hide();
+			stage.setTitle("Dashboard");
+			stage.setResizable(false);
+			stage.setScene(scene);
+			stage.show();
+		}
 	}
 	// Event Listener on JFXButton[#tbutton].onAction
 	@FXML

@@ -22,6 +22,8 @@ import javafx.scene.layout.VBox;
 
 public class DashboardController implements Initializable
 {
+	public static String first_name;
+	
 	@FXML
     private JFXDrawer drawer;
 	
@@ -63,12 +65,14 @@ public class DashboardController implements Initializable
 			{
 				fname.setText(FacebookLoginController.fname);
 			}
+			first_name = fname.getText();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		try {
+		try
+		{
 			VBox box = FXMLLoader.load(getClass().getResource("/com/sociogo/drawer/Drawer.fxml"));
 			drawer.setSidePane(box);
 			HamburgerBackArrowBasicTransition transition = new HamburgerBackArrowBasicTransition(hamburger);
